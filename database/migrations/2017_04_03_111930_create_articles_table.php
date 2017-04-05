@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('content');
-            $table->integer('like');
+            $table->integer('like')->default(0)->unsigned();
             $table->timestamps();
         });
     }
