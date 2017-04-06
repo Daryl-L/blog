@@ -29,4 +29,17 @@ class ArticleRepository implements ArticleRepositoryInterface
 		$articles = $this->article->orderBy('id', 'desc')->paginate($perPage);
 		return $articles;
 	}
+
+	/**
+	 * Get the article and its detail by the sign in url.
+	 * 
+	 * @param string $sign
+	 *
+	 * @return App\Article
+	 **/
+	public function getArticleBySign($sign)
+	{
+		$article = $this->article->where('sign', '=', $sign)->first();
+		return $article;
+	}
 }
