@@ -30,4 +30,13 @@ Interface ArticleRepositoryInterface
 	 * @return App\Article
 	 **/
 	public function getArticleBySign($sign);
+
+	/**
+	 * Get the article and its detail by id.
+	 *
+	 * @param int $id
+	 * 
+	 * @return App\Article
+	 **/
+	public function getArticleById($id);
 }

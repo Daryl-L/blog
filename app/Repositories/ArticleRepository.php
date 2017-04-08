@@ -51,4 +51,17 @@ class ArticleRepository implements ArticleRepositoryInterface
 		$article = $this->article->where('sign', '=', $sign)->first();
 		return $article;
 	}
+
+	/**
+	 * Get the article and its detail by id.
+	 *
+	 * @param int $id
+	 * 
+	 * @return App\Article
+	 */
+	public function getArticleById($id)
+	{
+		$article = $this->article->findOrFail(1);
+		return $article;
+	}
 }
