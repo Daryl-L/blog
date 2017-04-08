@@ -14,13 +14,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-	/**
-	 * To get the comments which belong to the one article.
-	 *
-	 * @return Illuminate\Database\Eloquent\Collection
-	 **/
+    /**
+     * To get the comments which belong to the one article.
+     *
+     * @return Illuminate\Database\Eloquent\Collection
+     **/
     public function comments()
     {
-    	return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Comment');
     }
 }
