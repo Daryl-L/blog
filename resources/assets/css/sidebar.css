@@ -1,0 +1,63 @@
+.sidebar {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    background: url(https://o90cnn3g2.qnssl.com/b1dc4ac092e111e6b5e9cda6452ed833.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.head {
+    width: 100%;
+    margin-top: 20%;
+}
+
+.nickname {
+    text-align: center;
+}
+
+.nickname a {
+    font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-shadow: 1px 1px 10px gray;
+    text-decoration: none;
+}
+
+.description {
+    font-family: cursive, Serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 10px gray;
+}
+
+#nav-main {
+    font-family: cursive, Serif;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#nav-main li, #nav-social li {
+    list-style: none;
+    line-height: 40px;
+}
+
+#nav-main a {
+    color: white;
+    text-shadow: 1px 1px 0 gray;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#nav-social {
+    margin: 50px;
+}
+
+#nav-social a {
+    text-decoration: none;
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+}
