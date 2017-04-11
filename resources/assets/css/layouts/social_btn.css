@@ -1,0 +1,90 @@
+.btn-social {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    line-height: 32px;
+    border-radius: 50%;
+    border: solid 1px;
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    font-family:"iconfont" !important;
+    font-size: 20px;
+    float: left;
+    /*transition: */
+}
+
+.btn-social:hover {
+    color: white;
+}
+
+/* Weibo */
+.btn-social-weibo:hover {
+    background: rgb(255, 153, 51);
+}
+
+.btn-social-weibo {
+    border-color: rgb(255, 153, 51);
+    color: rgb(255, 153, 51);
+}
+
+.btn-social-weibo:before {
+    content: '\e619';
+    font-size: 20px;
+}
+
+/* Facebook */
+.btn-social-facebook:hover {
+    background: rgb(59, 89, 152);
+}
+
+.btn-social-facebook {
+    border-color: rgb(59, 89, 152);
+    color: rgb(59, 89, 152);
+}
+
+.btn-social-facebook:before {
+    content: '\e613';
+}
+
+/* Github */
+.btn-social-github:hover {
+    background: rgb(36, 41, 46);
+}
+
+.btn-social-github {
+    border-color: rgb(36, 41, 46);
+    color: rgb(36, 41, 46);
+}
+
+.btn-social-github:before {
+    content: '\e741';
+}
+
+/* Twitter */
+.btn-social-twitter:hover {
+    background: rgb(69, 161, 242);
+}
+
+.btn-social-twitter {
+    border-color: rgb(69, 161, 242);
+    color: rgb(69, 161, 242);
+}
+
+.btn-social-twitter:before {
+    content: '\e634';
+}
+
+/* Linkedin */
+.btn-social-linkedin:hover {
+    background: rgb(0, 115, 177);
+}
+
+.btn-social-linkedin {
+    border-color: rgb(0, 115, 177);
+    color: rgb(0, 115, 177);
+}
+
+.btn-social-linkedin:before {
+    content: '\e697';
+}

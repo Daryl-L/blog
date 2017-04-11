@@ -1,0 +1,36 @@
+.article-list {
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    right: 0;
+    height: 100%;
+}
+
+.article-list-item {
+    border-bottom: 1px solid #E5E9F2;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.article-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+.article-title a {
+    text-decoration: none;
+    color: #324057;
+    font-weight: 100;
+}
+
+.article-detail {
+    text-align: center;
+    font-family: "Roboto Condensed";
+    color: #99A9BF;
+    font-weight: lighter;
+}
+
+.article-main {
+    margin-top: 50px;
+}
