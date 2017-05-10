@@ -18,10 +18,11 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('description');
-            $table->string('tag');
-            $table->integer('category');
+            $table->integer('category_id');
             $table->boolean('published');
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
