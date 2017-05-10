@@ -17,7 +17,10 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('content');
-            $table->integer('like');
+            $table->string('description');
+            $table->string('tag');
+            $table->integer('category');
+            $table->boolean('published');
             $table->timestamps();
         });
     }
