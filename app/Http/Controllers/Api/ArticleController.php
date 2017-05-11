@@ -49,7 +49,7 @@ class ArticleController extends Controller
             $article->save();
             return response()->json([
                 'msg' => 'Article created successfully'.
-            ]);
+            ], 201);
         }
     }
 
