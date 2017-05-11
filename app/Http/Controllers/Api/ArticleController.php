@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Article;
 
 class ArticleController extends Controller
 {
@@ -13,7 +12,7 @@ class ArticleController extends Controller
      */
     protected $article;
 
-    public function __construct(Article $article)
+    public function __construct(\App\Article $article)
     {
         $this->article = $article;
     }
@@ -37,19 +36,20 @@ class ArticleController extends Controller
     {
         $article = $this->article->where('sign', $request->input('sing'))->firstOrNew();
 
-        if ($article->id) {
-            return response()->json([
-                'error' => 'Article already exists.',
-            ], 409);
-        } else {
+        if (!$article->id) {
             $article->title       = $request->input('title');
             $article->content     = $request->input('content');
             $article->description = $request->input('description');
             $article->cateogry_id = $request->input('category');
             $article->save();
+
             return response()->json([
                 'msg' => 'Article created successfully'.
             ], 201);
+        } else {
+            return response()->json([
+                'error' => 'Article already exists.',
+            ], 409);
         }
     }
 
@@ -117,10 +117,11 @@ class ArticleController extends Controller
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             return response()->json([
                 'error' => 'Article not found.',
-            ]);
+            ], 404);
         }
 
         $article->delete();
+        
         return response()->json([], 204);
     }
 }
