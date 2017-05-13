@@ -71,7 +71,19 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        //
+        try {
+            $comment = $this->comment
+                ->with('article')
+                ->with('comment')
+                ->with('comments')
+                ->findOrFail($id);
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            return response()->json([
+                'error' => 'Comment not found.',
+            ], 404);
+        }
+
+        return $comment;
     }
 
     /**
@@ -91,7 +103,7 @@ class CommentController extends Controller
             ], 404);
         }
 
-        $comment->content = $request->input('connet');
+        $comment->content = $request->input('content');
         $comment->save();
 
         return response()->json([
