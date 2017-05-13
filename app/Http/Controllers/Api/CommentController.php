@@ -25,13 +25,12 @@ class CommentController extends Controller
      */
     public function index(Request $request)
     {
-        return $this->comment->where(function ($query) use ($request) {
-            $articleId = $request->input('article_id');
-            if ($articleId) {
-                $query->where('article_id', $articleId);
-            }
-        })
-        ->get();
+        return $this->comment
+            ->with('article')
+            ->with('comment')
+            ->with('comments')
+            ->orderBy('id', 'desc')
+            ->get();
     }
 
     /**
@@ -116,6 +115,7 @@ class CommentController extends Controller
             ], 404);
         }
 
+        $comment->comments()->delete();
         $comment->delete();
 
         return response()->json([], 204);
