@@ -73,9 +73,7 @@ class CommentController extends Controller
     {
         try {
             $comment = $this->comment
-                ->with('article')
-                ->with('comment')
-                ->with('comments')
+                ->with('article', 'comment', 'comments')
                 ->findOrFail($id);
         } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
             return response()->json([

@@ -35,7 +35,9 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $category = $this->category->where('name', $request->input('name'))->firstOrNew();
+        $category = $this->category->firstOrNew([
+            'name' => $request->input('name'),
+        ]);
 
         if (!$category->id) {
             $category->save();

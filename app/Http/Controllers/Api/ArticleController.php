@@ -34,13 +34,16 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        $article = $this->article->where('sign', $request->input('sing'))->firstOrNew();
+        $article = $this->article->firstOrNew([
+            'sign' => $request->input('sign'),
+        ], [
+            'title'       => $request->input('title'),
+            'content'     => $request->input('content'),
+            'description' => $request->input('description'),
+            'category_id' => $request->input('category'),
+        ]);
 
         if (!$article->id) {
-            $article->title       = $request->input('title');
-            $article->content     = $request->input('content');
-            $article->description = $request->input('description');
-            $article->cateogry_id = $request->input('category');
             $article->save();
 
             return response()->json([
@@ -121,7 +124,7 @@ class ArticleController extends Controller
         }
 
         $article->delete();
-        
+
         return response()->json([], 204);
     }
 }
