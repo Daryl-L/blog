@@ -14,6 +14,7 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.use(require('vue-material'))
 
 const app = new Vue({
     el: '#app'
