@@ -7,3 +7,9 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+html,body,#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
