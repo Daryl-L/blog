@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth.basic.once')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/article', 'Api\ArticleController@store');
+
+Route::get('/category', 'Api\CategoryController@index');
