@@ -18,7 +18,6 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->string('sign');
             $table->text('content');
-            $table->string('description');
             $table->integer('category_id')->unsigned();
             $table->boolean('published')->default(false);
             $table->timestamps();
