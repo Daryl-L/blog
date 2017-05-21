@@ -47,7 +47,7 @@ class CategoryController extends Controller
             ], 201);
         } else {
             return response()->json([
-                'error' => 'Category already exsits.';
+                'error' => 'Category already exsits.',
             ], 409);
         }
     }
