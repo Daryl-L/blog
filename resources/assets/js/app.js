@@ -22,19 +22,19 @@ Vue.use(ElementUI)
 Vue.component('example', require('./components/Example.vue'));
 
 const routes = [
-    { path: '/', component: require('./components/admin/Home.vue'), 
-        children: [
-            { path: 'article', component: require('./components/admin/Article.vue') }
-        ]
-    }
+  { name: 'home', path: '/', component: require('./components/admin/Home.vue'), 
+    children: [
+      { name: 'newArticle', path: 'article/new', component: require('./components/admin/article/NewArticle.vue') }
+    ]
+  }
 ]
 const router = new VueRouter({
-    routes
+  routes
 })
 
 console.log(router)
 
 const app = new Vue({
-    router,
-    el: '#app'
+  router,
+  el: '#app'
 });
