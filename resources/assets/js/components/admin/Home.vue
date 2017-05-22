@@ -7,7 +7,7 @@
           <template slot="title"><i class="el-icon-document"></i>文章</template>
           <el-menu-item-group>
             <el-menu-item index="1-1" :route="{ name: 'newArticle' }"><i class="el-icon-edit"></i>写文章</el-menu-item>
-            <el-menu-item index="1-2"><i class="el-icon-menu"></i>文章列表</el-menu-item>
+            <el-menu-item index="1-2" :route="{ name: 'articleList' }"><i class="el-icon-menu"></i>文章列表</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="2">
