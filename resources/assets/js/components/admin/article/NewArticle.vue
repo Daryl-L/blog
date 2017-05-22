@@ -1,5 +1,5 @@
 <template>
-  <div class="article-new"> 
+  <div class="main-container"> 
     <el-row>
       <el-input v-model="title" placeholder="请输入标题"></el-input>
     </el-row>
@@ -29,7 +29,6 @@
 <script>
   export default {
     data() {
-      console.log(1)
       return {
         title: '',
         sign: '',
@@ -92,12 +91,6 @@
 <style scoped>
   .el-row {
     margin-top: 10px;
-  }
-
-  .article-new {
-    height: 100%;
-    width: 100%;
-    padding: 20px;
   }
 
   #editor {
