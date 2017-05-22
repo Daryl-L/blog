@@ -108,6 +108,31 @@ class ArticleController extends Controller
     }
 
     /**
+     * Publish the article.
+     *
+     * @param int $id
+     *
+     * @return Illuminate\Http\Response
+     */
+    public function publish($id)
+    {
+        try {
+            $article = $this->article->findOrFail($id);
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            return response()->json([
+                'error' => 'Article not found.',
+            ], 404);
+        }
+
+        $article->published ^= 1;
+        $article->save();
+
+        return response()->json([
+            'msg' => 'Article published successfully.',
+        ], 201);
+    }
+
+    /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
