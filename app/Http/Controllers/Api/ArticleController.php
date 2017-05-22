@@ -23,7 +23,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return $this->article->withCount('comments')->get();
+        return $this->article->withCount('comments')->with('category')->get();
     }
 
     /**
