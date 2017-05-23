@@ -13,7 +13,7 @@
         <el-submenu index="2">
           <template slot="title"><i class="el-icon-message"></i>栏目</template>
           <el-menu-item-group>
-            <el-menu-item index="2-1"><i class="el-icon-edit"></i>新建栏目</el-menu-item>
+            <el-menu-item index="2-1" :route="{ name: 'newCategory' }"><i class="el-icon-edit"></i>新建栏目</el-menu-item>
             <el-menu-item index="2s-2"><i class="el-icon-document"></i>栏目列表</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
@@ -58,5 +58,11 @@
 
   .child {
     height: 100%;
+  }
+
+  .main-container {
+    height: 100%;
+    width: 100%;
+    padding: 20px;
   }
 </style>

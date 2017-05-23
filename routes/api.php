@@ -26,3 +26,5 @@ Route::patch('/article/{id}', 'Api\ArticleController@publish')->where('id', '[0-
 Route::delete('/article/{id}', 'Api\ArticleController@destroy')->where('id', '[0-9]+');
 
 Route::get('/category', 'Api\CategoryController@index');
+
+Route::post('/category', 'Api\CategoryController@store');
