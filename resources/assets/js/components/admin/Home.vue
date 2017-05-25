@@ -14,7 +14,7 @@
           <template slot="title"><i class="el-icon-message"></i>栏目</template>
           <el-menu-item-group>
             <el-menu-item index="2-1" :route="{ name: 'newCategory' }"><i class="el-icon-edit"></i>新建栏目</el-menu-item>
-            <el-menu-item index="2s-2"><i class="el-icon-document"></i>栏目列表</el-menu-item>
+            <el-menu-item index="2s-2" :route="{ name: 'categoryList' }"><i class="el-icon-document"></i>栏目列表</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>

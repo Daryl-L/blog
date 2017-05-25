@@ -26,7 +26,8 @@ const routes = [
     children: [
       { name: 'newArticle', path: 'article/new', component: require('./components/admin/article/NewArticle.vue') },
       { name: 'articleList', path: 'article/list', component: require('./components/admin/article/ArticleList.vue') },
-      { name: 'newCategory', path: 'category/list', component: require('./components/admin/category/NewCategory.vue') }
+      { name: 'newCategory', path: 'category/new', component: require('./components/admin/category/NewCategory.vue') },
+      { name: 'categoryList', path: 'category/list', component: require('./components/admin/category/CategoryList.vue') }
     ]
   }
 ]

@@ -28,3 +28,5 @@ Route::delete('/article/{id}', 'Api\ArticleController@destroy')->where('id', '[0
 Route::get('/category', 'Api\CategoryController@index');
 
 Route::post('/category', 'Api\CategoryController@store');
+
+Route::delete('/category/{id}', 'Api\CategoryController@destroy');
